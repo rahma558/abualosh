@@ -2,30 +2,21 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>أبوعلوش ود سرحان | صيانة سوفت وير</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أبوعلوش ود سرحان | صيانة وبرمجة</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #141e30, #243b55);
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: white;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
-      padding: 40px 20px;
+      padding: 0;
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      padding: 30px;
-      max-width: 700px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      backdrop-filter: blur(10px);
+    header {
+      background-color: rgba(0,0,0,0.3);
+      padding: 40px 20px;
     }
 
     h1 {
@@ -33,67 +24,107 @@
       margin-bottom: 10px;
     }
 
-    h2 {
-      margin-top: 30px;
-      font-size: 1.8em;
+    p.lead {
+      font-size: 1.2em;
       color: #aad8ff;
+    }
+
+    section {
+      padding: 30px 20px;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #00d4ff;
     }
 
     ul {
       list-style: none;
       padding: 0;
-      margin: 15px 0;
+      max-width: 500px;
+      margin: auto;
     }
 
     li {
+      background-color: rgba(255,255,255,0.05);
       margin: 10px 0;
+      padding: 15px;
+      border-radius: 10px;
       font-size: 1.1em;
     }
 
-    a {
+    .contact a {
+      display: block;
+      margin: 10px 0;
       color: #aad8ff;
       text-decoration: none;
     }
 
-    a:hover {
+    .contact a:hover {
       text-decoration: underline;
     }
 
-    .contact {
-      margin-top: 20px;
-      font-size: 1.1em;
-    }
-
     footer {
-      margin-top: 30px;
+      margin-top: 40px;
+      padding: 20px;
       font-size: 0.9em;
       color: #ccc;
+      background-color: rgba(0,0,0,0.2);
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebc59;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>أبوعلوش ود سرحان</h1>
-    <p>مرحبا بكم في موقعنا المتخصص في صيانة وبرمجة السوفت وير لجميع الأجهزة</p>
 
-    <h2>💼 خدماتنا:</h2>
+  <header>
+    <h1>أبوعلوش ود سرحان</h1>
+    <p class="lead">صيانة وبرمجة السوفت وير لجميع الأجهزة 🔧📱</p>
+  </header>
+
+  <section>
+    <h2>💼 خدماتنا</h2>
     <ul>
       <li>🔧 صيانة الهواتف الذكية</li>
       <li>💾 برمجة السوفت وير</li>
       <li>📲 فك الشفرات</li>
       <li>🔋 تحديث أنظمة التشغيل</li>
       <li>🧠 استرجاع البيانات</li>
-    <li> صيانه بدر فون0118888979
-l    <div class="contact">
-      <p>📞 رقم الهاتف: <a href="tel:+249906663404">0906663404</a></p>
-      <p>📧 البريد الإلكتروني: <a href="mailto:jokar09999999@gmail.com">jokar09999999@gmail.com</a></p>
-      <p>💬 واتساب: <a href="https://wa.me/249906663404" target="_blank">راسلنا على الواتساب</a></p>
-      <p>📘 فيسبوك: <a href="https://www.facebook.com/abualosh.sarhan" target="_blank">صفحتنا على فيسبوك</a></p>
-    </div>
+    </ul>
+  </section>
 
-    <footer>
-      <p>© جميع الحقوق محفوظة لـ أبوعلوش ود سرحان 2025</p>
-    </footer>
-  </div>
+  <section class="contact">
+    <h2>📞 تواصل معنا</h2>
+    <a href="tel:+249906663404">اتصل بنا: 0906663404</a>
+    <a href="mailto:jokar09999999@gmail.com">jokar09999999@gmail.com</a>
+    <a href="https://wa.me/249906663404" target="_blank">راسلنا على الواتساب</a>
+    <a href="https://www.facebook.com/abualosh.sarhan" target="_blank">صفحتنا على فيسبوك</a>
+  </section>
+
+  <a class="whatsapp-button" href="https://wa.me/249906663404" target="_blank">
+    💬 تواصل واتساب
+  </a>
+
+  <footer>
+    <p>© جميع الحقوق محفوظة لـ أبوعلوش ود سرحان 2025</p>
+  </footer>
+
 </body>
 </html>
