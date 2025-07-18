@@ -1,0 +1,36 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  background: #f0f4f8;
+  color: #333;
+  direction: rtl;
+}
+
+header {
+  background-color: #005b96;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #ffeb3b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main, section {
+  padding: 20px;
+  background: white;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #005b96;
+  color: white;
+}
