@@ -1,70 +1,195 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>أبوعلوش ود سرحان</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>مرحب بيكم في موقعي</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background: linear-gradient(to right, #141e30, #243b55);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: white;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 15px;
+      width: 350px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
       text-align: center;
     }
-    header, footer {
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
     h1 {
-      font-size: 2.5em;
+      margin-bottom: 25px;
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: 1.5px;
     }
-    nav a {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 15px;
-      background: #00d4ff;
-      color: black;
-      border-radius: 10px;
+    button {
+      width: 100%;
+      padding: 12px 0;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .login-btn {
+      background-color: #34c759;
+      color: white;
+    }
+    .login-btn:hover {
+      background-color: #28a745;
+    }
+    .register-btn {
+      background-color: #007bff;
+      color: white;
+    }
+    .register-btn:hover {
+      background-color: #0056b3;
+    }
+    form {
+      margin-top: 15px;
+      text-align: right;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px 0;
+      font-weight: 600;
+    }
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    .link {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #ddd;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    /* الصفحة الثانية */
+    .coming-soon {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .social-links {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 25px 0;
+      text-align: center;
+    }
+    .social-links li {
+      margin: 8px 0;
+      font-weight: 600;
+      font-size: 16px;
+      color: #ccc;
+      cursor: pointer;
+    }
+    .social-links li a {
+      color: #aad4ff;
       text-decoration: none;
     }
-    nav a:hover {
-      background: #00aacc;
+    .social-links li a:hover {
+      text-decoration: underline;
     }
-    section {
-      margin: 20px auto;
-      max-width: 800px;
-    }
-    .footer-links a {
-      margin: 0 10px;
-      color: #aad8ff;
+    .footer {
+      font-size: 14px;
+      font-weight: 700;
+      color: #eee;
+      margin-top: 10px;
+      border-top: 1px solid #444;
+      padding-top: 10px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>📱 أبوعلوش ود سرحان</h1>
-    <p>خدماتنا المتكاملة في صيانة وبرمجة الهواتف الذكية</p>
-  </header>
-  <section>
-    <nav>
-      <a href="smartphones.html">صيانة الهواتف الذكية</a>
-      <a href="software.html">برمجة السوفت وير</a>
-      <a href="unlock.html">فك الشفرات</a>
-      <a href="update.html">تحديث الأنظمة</a>
-      <a href="recovery.html">استرجاع البيانات</a>
-      <a href="about.html">من نحن</a>
-      <a href="contact.html">اتصل بنا</a>
-    </nav>
-  </section>
-  <footer>
-    <div class="footer-links">
-      <a href="index.html">الصفحة الرئيسية</a> |
-      <a href="about.html">من نحن</a> |
-      <a href="contact.html">اتصل بنا</a>
-    </div>
-    <p>© 2025 جميع الحقوق محفوظة لـ أبوعلوش ود سرحان</p>
-  </footer>
+
+<div class="container" id="main-container">
+  <h1>مرحب بيكم في موقعي</h1>
+  <button class="login-btn" onclick="showLogin()">تسجيل الدخول عبر الإيميل</button>
+  <button class="register-btn" onclick="showRegister()">إنشاء حساب جديد</button>
+
+  <!-- نموذج تسجيل الدخول -->
+  <form id="login-form" style="display:none;" onsubmit="event.preventDefault(); alert('تسجيل دخول تم بنجاح!');">
+    <label for="login-email">الإيميل:</label>
+    <input type="email" id="login-email" required placeholder="ادخل ايميلك" />
+    <label for="login-password">كلمة المرور:</label>
+    <input type="password" id="login-password" required placeholder="كلمة المرور" />
+    <button type="submit" class="login-btn">دخول</button>
+    <div class="link" onclick="backToMain()">عودة</div>
+  </form>
+
+  <!-- نموذج إنشاء حساب -->
+  <form id="register-form" style="display:none;" onsubmit="event.preventDefault(); showComingSoon();">
+    <label for="register-email">الإيميل:</label>
+    <input type="email" id="register-email" required placeholder="ادخل ايميلك" />
+    <label for="register-password">كلمة المرور:</label>
+    <input type="password" id="register-password" required placeholder="كلمة المرور" />
+    <button type="submit" class="register-btn">إنشاء حساب</button>
+    <div class="link" onclick="backToMain()">عودة</div>
+  </form>
+</div>
+
+<script>
+  function showLogin() {
+    document.getElementById('main-container').innerHTML = `
+      <h1>تسجيل الدخول</h1>
+      <form id="login-form" onsubmit="event.preventDefault(); alert('تسجيل دخول تم بنجاح!');">
+        <label for="login-email">الإيميل:</label>
+        <input type="email" id="login-email" required placeholder="ادخل ايميلك" />
+        <label for="login-password">كلمة المرور:</label>
+        <input type="password" id="login-password" required placeholder="كلمة المرور" />
+        <button type="submit" class="login-btn">دخول</button>
+      </form>
+      <div class="link" onclick="location.reload()">عودة</div>
+    `;
+  }
+
+  function showRegister() {
+    document.getElementById('main-container').innerHTML = `
+      <h1>إنشاء حساب جديد</h1>
+      <form id="register-form" onsubmit="event.preventDefault(); showComingSoon();">
+        <label for="register-email">الإيميل:</label>
+        <input type="email" id="register-email" required placeholder="ادخل ايميلك" />
+        <label for="register-password">كلمة المرور:</label>
+        <input type="password" id="register-password" required placeholder="كلمة المرور" />
+        <button type="submit" class="register-btn">إنشاء حساب</button>
+      </form>
+      <div class="link" onclick="location.reload()">عودة</div>
+    `;
+  }
+
+  function showComingSoon() {
+    document.getElementById('main-container').innerHTML = `
+      <h1>سيتم تطوير القسم</h1>
+      <ul class="social-links">
+        <li onclick="alert('قيد التطوير')">الواتس: قريب</li>
+        <li><a href="http://rahma112.free.nf" target="_blank" rel="noopener noreferrer">تيك توك: قريب</a></li>
+        <li>الفيس: قريب</li>
+        <li>اختراق: قريب</li>
+      </ul>
+      <div class="coming-soon">نهايت مجال امش ي مكنه ود سرحان بعيد ي مااان 🫡🫡🆗</div>
+      <div class="footer">تحياتي أبوعلوش ود سرحان مطور الموقع</div>
+    `;
+  }
+
+  function backToMain() {
+    location.reload();
+  }
+</script>
+
 </body>
-</html>
+                                                                         </html>
